@@ -1,5 +1,6 @@
 // test_utilGeneral.gs
-let testerGeneral = new TestGasExecutor();
+// let testerGeneral = new TestGasExecutor();
+let tester = TestGAS.createExecutor();
 class Test_utilGeneral{
 
   test_getIdToReadActualInGss_1_1(funcName="test_getIdToReadActualInGss_1_2"){
