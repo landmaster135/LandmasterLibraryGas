@@ -171,9 +171,23 @@ function getFileIdArrayByMimeTypes(folderId, mimeTypes=[]){
   return fileIdArray;
 };
 
-
-
-
+/**
+ * @param {string} text
+ * @return {string[]} fileIdArray
+*/
+function getFunctionsByConstants(text){
+  let tmp_text = text;
+  const objOfMark = {
+    "const ": "/**\n * \n * @return {string}\n */\nfunction "
+    , " = ": "(){\n  return "
+    , ";": ";\n}\n"
+  };
+  for (const [key, value] of Object.entries(objOfMark)) {
+    const reg = new RegExp(key, "gm")
+    tmp_text = tmp_text.replace(reg, value)
+  }
+  return tmp_text;
+};
 
 
 
