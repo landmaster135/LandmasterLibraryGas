@@ -6,7 +6,7 @@ class Test_utilGeneral{
   // test_getIdToReadActualInGss_1_1(funcName="test_getIdToReadActualInGss_1_2"){
   //   const sheetName = "テスト用シート";
   //   const columnForId = 1;
-  //   const sheetId = SHEET_ID_TEST;
+  //   const sheetId = LandGasterId.LLG_SHEET_ID_TEST();
   //   const idToRead = 201;
   //   let actual = getIdToReadActualInGss(sheetName, columnForId, {idToRead: idToRead, sheetId: sheetId});
   //   let expected = 111;
@@ -24,7 +24,7 @@ class Test_utilGeneral{
   // test_getIdToReadActualInGss_1_2(funcName="test_getIdToReadActualInGss_1_2"){
   //   const sheetName = "テスト用シート";
   //   const columnForId = 1;
-  //   const testSheetId = SHEET_ID_TEST;
+  //   const testSheetId = LandGasterId.LLG_SHEET_ID_TEST();
   //   let actual = getIdToReadActualInGss(sheetName, columnForId, {sheetId: testSheetId});
   //   let expected = 111;
 
@@ -124,7 +124,7 @@ class Test_utilGeneral{
   // }
 
   // test_getFilesByMimeType_1_1(funcName="test_getFilesByMimeType_1_1"){
-  //   const folderId = FOLDER_ID_TEST_FOR_UTIL_GENERAL;
+  //   const folderId = LandGasterId.LLG_FOLDER_ID_TEST_FOR_UTIL_GENERAL();
   //   let actual = getFilesByMimeTypes(folderId);
   //   let expected = DriveApp.getFolderById(folderId).getFiles();
   //   console.log(`${funcName}: ${getStrRepeatedToMark("a")}: `);
@@ -149,7 +149,7 @@ class Test_utilGeneral{
   // }
 
   // test_getFilesByMimeType_1_2(funcName="test_getFilesByMimeType_1_2"){
-  //   const folderId = FOLDER_ID_TEST_FOR_UTIL_GENERAL;
+  //   const folderId = LandGasterId.LLG_FOLDER_ID_TEST_FOR_UTIL_GENERAL();
   //   const mimeTypes = []
   //   let actual = getFilesByMimeTypes(folderId, mimeTypes);
   //   let expected = DriveApp.getFolderById(folderId).getFiles();
@@ -238,9 +238,9 @@ class Test_utilGeneral{
 
   test_getFunctionsByConstants_1_1(){
     const text = `const DRAFT_FOLDER_ID = "11nJes5UTnc1xwMyFNFw3jG_nWgKKjb5b";
-const IMAGE_TMP_FOLDER_ID = "1IawaXRPivPM5jyLERmidnLplFvJdSCrS";
-const TEMPLATE_DOC_ID = "1CBM96cEjVesKFxuKnlLYTETSWAElju2ZteZeEDskWDY";
-const ERROR_LOG_DOC_ID = "1G1Iz73w4bIWT9BQa6pIwMQ6T90XJuNgP-4oFiot2mNA";`;
+const IMAGE_TMP_FOLDER_ID = "1IawaXRPivPM5jyLERmidnLplFvJdSEPV";
+const TEMPLATE_DOC_ID = "1CBM96cEjVesKFxuKnlLYTETSWAElju2ZteZeEDskTYo";
+const ERROR_LOG_DOC_ID = "1G1Iz73w4bIWT9BQa6pIwMQ6T90XJuNgP-4B7uot2mNA";`;
     const actual = getFunctionsByConstants(text);
     const expected = `/**
  * 
@@ -255,7 +255,7 @@ function DRAFT_FOLDER_ID(){
  * @return {string}
  */
 function IMAGE_TMP_FOLDER_ID(){
-  return "1IawaXRPivPM5jyLERmidnLplFvJdSCrS";
+  return "1IawaXRPivPM5jyLERmidnLplFvJdSEPV";
 }
 
 /**
@@ -263,7 +263,7 @@ function IMAGE_TMP_FOLDER_ID(){
  * @return {string}
  */
 function TEMPLATE_DOC_ID(){
-  return "1CBM96cEjVesKFxuKnlLYTETSWAElju2ZteZeEDskWDY";
+  return "1CBM96cEjVesKFxuKnlLYTETSWAElju2ZteZeEDskTYo";
 }
 
 /**
@@ -271,7 +271,7 @@ function TEMPLATE_DOC_ID(){
  * @return {string}
  */
 function ERROR_LOG_DOC_ID(){
-  return "1G1Iz73w4bIWT9BQa6pIwMQ6T90XJuNgP-4oFiot2mNA";
+  return "1G1Iz73w4bIWT9BQa6pIwMQ6T90XJuNgP-4B7uot2mNA";
 }
 `;
     tester.assertEquals(actual, expected);
@@ -281,21 +281,7 @@ function ERROR_LOG_DOC_ID(){
 /**
  * @return {bool} isTestTerminated
 */
-// function execute_Test_utilGeneral(){
-//   const funcName = "execute_test_utilGeneral";
-//   let tester = new TestGasExecutor();
-//   console.log(`${funcName}: ${getStrRepeatedToMark("a")}`);
-//   let isTestTerminated = tester.executeTestGas(Test_utilGeneral);
-//   console.log(`${funcName}: ${getStrRepeatedToMark("b")}`);
-//   return isTestTerminated;
-// }
 function execute_Test_utilGeneral(){
-  // const funcName = "execute_Test_utilGeneral";
-  // let testerGeneral = new TestGasExecutor();
-  // console.log(`${funcName}: ${getStrRepeatedToMark("a")}`);
-  
-  // let failureFuncs = tester.executeTestGas(Test_utilGeneral);
   let isTestTerminated = tester.executeTestGas(Test_utilGeneral);
-  // console.log(`${funcName}: ${getStrRepeatedToMark("b")}`);
   return isTestTerminated;
 }
