@@ -189,6 +189,11 @@ function getFunctionsByConstants(text){
   return tmp_text;
 };
 
+function printGetFunctionsByConstants(){
+  const text = `const FOLDER_ID_TEST_FOR_UTIL_GENERAL = "1_WyWgzZn2RD_c0zT_pAJm9QC9P_Fa51M";
 
+const SHEET_ID_TEST = "1Di3Ydd4bFH-3Eerf8UK2w8W-fXsvWnXUzE3sXynPp3k";`;
+  console.log(getFunctionsByConstants(text));
+}
 
 
