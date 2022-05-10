@@ -6,7 +6,7 @@ class Test_utilGeneral{
   // test_getIdToReadActualInGss_1_1(funcName="test_getIdToReadActualInGss_1_2"){
   //   const sheetName = "テスト用シート";
   //   const columnForId = 1;
-  //   const sheetId = LandGasterId.LLG_SHEET_ID_TEST();
+  //   const sheetId = SHEET_ID_TEST;
   //   const idToRead = 201;
   //   let actual = getIdToReadActualInGss(sheetName, columnForId, {idToRead: idToRead, sheetId: sheetId});
   //   let expected = 111;
@@ -24,7 +24,7 @@ class Test_utilGeneral{
   // test_getIdToReadActualInGss_1_2(funcName="test_getIdToReadActualInGss_1_2"){
   //   const sheetName = "テスト用シート";
   //   const columnForId = 1;
-  //   const testSheetId = LandGasterId.LLG_SHEET_ID_TEST();
+  //   const testSheetId = SHEET_ID_TEST;
   //   let actual = getIdToReadActualInGss(sheetName, columnForId, {sheetId: testSheetId});
   //   let expected = 111;
 
@@ -124,7 +124,7 @@ class Test_utilGeneral{
   // }
 
   // test_getFilesByMimeType_1_1(funcName="test_getFilesByMimeType_1_1"){
-  //   const folderId = LandGasterId.LLG_FOLDER_ID_TEST_FOR_UTIL_GENERAL();
+  //   const folderId = FOLDER_ID_TEST_FOR_UTIL_GENERAL;
   //   let actual = getFilesByMimeTypes(folderId);
   //   let expected = DriveApp.getFolderById(folderId).getFiles();
   //   console.log(`${funcName}: ${getStrRepeatedToMark("a")}: `);
@@ -149,7 +149,7 @@ class Test_utilGeneral{
   // }
 
   // test_getFilesByMimeType_1_2(funcName="test_getFilesByMimeType_1_2"){
-  //   const folderId = LandGasterId.LLG_FOLDER_ID_TEST_FOR_UTIL_GENERAL();
+  //   const folderId = FOLDER_ID_TEST_FOR_UTIL_GENERAL;
   //   const mimeTypes = []
   //   let actual = getFilesByMimeTypes(folderId, mimeTypes);
   //   let expected = DriveApp.getFolderById(folderId).getFiles();

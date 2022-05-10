@@ -190,10 +190,24 @@ function getFunctionsByConstants(text){
 };
 
 function printGetFunctionsByConstants(){
-  const text = `const FOLDER_ID_TEST_FOR_UTIL_GENERAL = "1_WyWgzZn2RD_c0zT_pAJm9QC9P_Fa51M";
-
-const SHEET_ID_TEST = "1Di3Ydd4bFH-3Eerf8UK2w8W-fXsvWnXUzE3sXynPp3k";`;
+  const text = `const BEARER_TOKEN_TWITTER_ACCOUNT_JP = "AAAAAAAAAAAAAAAAAAAAAD6UYQEAAAAAZImoEnceh4ZHnxX%2B5F20B7kLGTA%3DxhSs33RzOAEslNlbFzarFTiti3bIeBN7T8xvXBEsY4jeP2J6lH";
+const ACCESS_TOKEN_TWITTER_ACCOUNT_JP = "1484872342367240200-yCMRHAjwULujWnZJj5qknKe3WRxfAb";
+const ACCESS_TOKEN_SECRET_TWITTER_ACCOUNT_JP = "SYUu3w9gg2bC8gTBYgWzhVN7Pb58dd1IPCCAxaQHeGG21";
+const API_KEY_TWITTER_ACCOUNT_JP = "Bf3FZaXPxUEACpc4IMzb7c8OI";
+const API_KEY_SECRET_TWITTER_ACCOUNT_JP = "LVGhDatoZHjfyV4XdMTNJXJ701sjVbN5OKBfrFSdp9BfYdtv99";
+const BEARER_TOKEN_TWITTER_ACCOUNT_EN = "AAAAAAAAAAAAAAAAAAAAAJasYQEAAAAAXfpEO5CJV93NKKkxo0LiAA2%2BSe0%3DvcrxY8w5vFfYHropzKeijwo7vQ8TsIRkL1FG9eIPF3VYVHGwSP";
+const ACCESS_TOKEN_TWITTER_ACCOUNT_EN = "1485133906286243842-pWzVkIHwg3hYQidXDyOACNIqUyx3EZ";
+const ACCESS_TOKEN_SECRET_TWITTER_ACCOUNT_EN = "iYa6KD2aboHFtADxngHcGhknjqamMBfwIYGunByYKsA46";
+const API_KEY_TWITTER_ACCOUNT_EN = "TS2HNa2ZpiwrlNEcT557txt15";
+const API_KEY_SECRET_TWITTER_ACCOUNT_EN = "v2f17oQewKXoYBjX9BS4C1Ln4E3MJg90vo8fMxi1ZLnFmJL8je";`;
   console.log(getFunctionsByConstants(text));
+}
+
+function printGetUpperText(){
+  const text = "api_Key_Secret_Twitter_Account_En";
+  let upperText = text.toUpperCase();
+  console.log(upperText);
+  return upperText;
 }
 
 
