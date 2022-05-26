@@ -172,6 +172,45 @@ function getFileIdArrayByMimeTypes(folderId, mimeTypes=[]){
 };
 
 /**
+ * @param {any[]} obj
+ * @return {boolean}
+ */
+function isArray(obj){
+  if(!isObjectType(obj, "Array")){
+    return false;
+  }
+  return true;
+}
+
+/**
+ * @param {Error} error
+ * @return {boolean}
+ */
+function isErrorType(error){
+  if(!isObjectType(error, "Error")){
+    return false;
+  }
+  return true;
+}
+
+/**
+ * @param {any} obj
+ * @param {string} type
+ * @return {boolean}
+ */
+function isObjectType(obj, type){
+  let objectTypeInfo = Object.prototype.toString.call(type);
+  if(objectTypeInfo.indexOf("String") === -1){
+    throw new TypeError("type must be String type.")
+  }
+  objectTypeInfo = Object.prototype.toString.call(obj);
+  if(objectTypeInfo.indexOf(type) === -1){
+    return false;
+  }
+  return true;
+}
+
+/**
  * @param {string} text
  * @return {string[]} fileIdArray
 */
