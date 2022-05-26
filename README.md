@@ -24,7 +24,7 @@
 
 ### Usage
 
-```
+```javascript
 console.log(getStrRepeatedToMark("a", 20));
 ```
 
@@ -32,7 +32,7 @@ console.log(getStrRepeatedToMark("a", 20));
 
 ### Usage
 
-```
+```javascript
 const mimeTypes = ["image/png", "image/jpg"];
 const fileIdArray = getFileIdArrayByMimeTypes(folderId, mimeTypes);
 ```
