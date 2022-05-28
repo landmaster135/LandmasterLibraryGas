@@ -172,11 +172,11 @@ function getFileIdArrayByMimeTypes(folderId, mimeTypes=[]){
 };
 
 /**
- * @param {any[]} obj
+ * @param {any[]} array
  * @return {boolean}
  */
-function isArray(obj){
-  if(!isObjectType(obj, "Array")){
+function isArray(array){
+  if(!isObjectType(array, "Array")){
     return false;
   }
   return true;
