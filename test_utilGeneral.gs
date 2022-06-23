@@ -276,6 +276,220 @@ function ERROR_LOG_DOC_ID(){
 `;
     tester.assertEquals(actual, expected);
   }
+
+  // noraml systems
+  test_sortArrayDescend_1_1(){
+    const var1 = 1;
+    const var2 = 2;
+    const array = [var1, var2];
+    const actual = sortArrayDescend(array);
+    const expected = [var2, var1];
+    tester.assertEqualsArrayItems(actual, expected);
+    return true;
+  }
+
+  // noraml systems
+  test_sortArrayDescend_1_2(){
+    const var1 = 1;
+    const var2 = 2;
+    const array = [var2, var1];
+    const actual = sortArrayDescend(array);
+    const expected = [var2, var1];
+    tester.assertEqualsArrayItems(actual, expected);
+    return true;
+  }
+
+  // noraml systems
+  test_sortArrayDescend_2_1(){
+    const var1 = 1;
+    const var2 = 2;
+    const var3 = 3;
+    const array = [var1, var2, var3];
+    const actual = sortArrayDescend(array);
+    const expected = [var3, var2, var1];
+    tester.assertEqualsArrayItems(actual, expected);
+    return true;
+  }
+
+  // noraml systems
+  test_sortArrayDescend_2_2(){
+    const var1 = 1;
+    const var2 = 2;
+    const var3 = 3;
+    const array = [var1, var3, var2];
+    const actual = sortArrayDescend(array);
+    const expected = [var3, var2, var1];
+    tester.assertEqualsArrayItems(actual, expected);
+    return true;
+  }
+
+  // noraml systems
+  test_sortArrayDescend_2_3(){
+    const var1 = 1;
+    const var2 = 2;
+    const var3 = 3;
+    const array = [var2, var1, var3];
+    const actual = sortArrayDescend(array);
+    const expected = [var3, var2, var1];
+    tester.assertEqualsArrayItems(actual, expected);
+    return true;
+  }
+
+  // noraml systems
+  test_sortArrayDescend_2_4(){
+    const var1 = 1;
+    const var2 = 2;
+    const var3 = 3;
+    const array = [var2, var3, var1];
+    const actual = sortArrayDescend(array);
+    const expected = [var3, var2, var1];
+    tester.assertEqualsArrayItems(actual, expected);
+    return true;
+  }
+
+  // noraml systems
+  test_sortArrayDescend_2_5(){
+    const var1 = 1;
+    const var2 = 2;
+    const var3 = 3;
+    const array = [var3, var1, var2];
+    const actual = sortArrayDescend(array);
+    const expected = [var3, var2, var1];
+    tester.assertEqualsArrayItems(actual, expected);
+    return true;
+  }
+
+  // noraml systems
+  test_sortArrayDescend_2_6(){
+    const var1 = 1;
+    const var2 = 2;
+    const var3 = 3;
+    const array = [var3, var2, var1];
+    const actual = sortArrayDescend(array);
+    const expected = [var3, var2, var1];
+    tester.assertEqualsArrayItems(actual, expected);
+    return true;
+  }
+
+  // abnoraml systems
+  test_sortArrayDescend_3_1(){
+    const array = null;
+    tester.assertError(sortArrayDescend, [array], TypeError);
+    return true;
+  }
+
+  // abnoraml systems
+  test_sortArrayDescend_3_2(){
+    tester.assertError(sortArrayDescend, [], TypeError);
+    return true;
+  }
+
+  // noraml systems
+  test_sortArrayAscend_1_1(){
+    const var1 = 1;
+    const var2 = 2;
+    const array = [var1, var2];
+    const actual = sortArrayAscend(array);
+    const expected = [var1, var2];
+    tester.assertEqualsArrayItems(actual, expected);
+    return true;
+  }
+
+  // noraml systems
+  test_sortArrayAscend_1_2(){
+    const var1 = 1;
+    const var2 = 2;
+    const array = [var2, var1];
+    const actual = sortArrayAscend(array);
+    const expected = [var1, var2];
+    tester.assertEqualsArrayItems(actual, expected);
+    return true;
+  }
+
+  // noraml systems
+  test_sortArrayAscend_2_1(){
+    const var1 = 1;
+    const var2 = 2;
+    const var3 = 3;
+    const array = [var1, var2, var3];
+    const actual = sortArrayAscend(array);
+    const expected = [var1, var2, var3];
+    tester.assertEqualsArrayItems(actual, expected);
+    return true;
+  }
+
+  // noraml systems
+  test_sortArrayAscend_2_2(){
+    const var1 = 1;
+    const var2 = 2;
+    const var3 = 3;
+    const array = [var1, var3, var2];
+    const actual = sortArrayAscend(array);
+    const expected = [var1, var2, var3];
+    tester.assertEqualsArrayItems(actual, expected);
+    return true;
+  }
+
+  // noraml systems
+  test_sortArrayAscend_2_3(){
+    const var1 = 1;
+    const var2 = 2;
+    const var3 = 3;
+    const array = [var2, var1, var3];
+    const actual = sortArrayAscend(array);
+    const expected = [var1, var2, var3];
+    tester.assertEqualsArrayItems(actual, expected);
+    return true;
+  }
+
+  // noraml systems
+  test_sortArrayAscend_2_4(){
+    const var1 = 1;
+    const var2 = 2;
+    const var3 = 3;
+    const array = [var2, var3, var1];
+    const actual = sortArrayAscend(array);
+    const expected = [var1, var2, var3];
+    tester.assertEqualsArrayItems(actual, expected);
+    return true;
+  }
+
+  // noraml systems
+  test_sortArrayAscend_2_5(){
+    const var1 = 1;
+    const var2 = 2;
+    const var3 = 3;
+    const array = [var3, var1, var2];
+    const actual = sortArrayAscend(array);
+    const expected = [var1, var2, var3];
+    tester.assertEqualsArrayItems(actual, expected);
+    return true;
+  }
+
+  // noraml systems
+  test_sortArrayAscend_2_6(){
+    const var1 = 1;
+    const var2 = 2;
+    const var3 = 3;
+    const array = [var3, var2, var1];
+    const actual = sortArrayAscend(array);
+    const expected = [var1, var2, var3];
+    tester.assertEqualsArrayItems(actual, expected);
+    return true;
+  }
+
+  // abnoraml systems
+  test_sortArrayAscend_3_1(){
+    const array = null;
+    tester.assertError(sortArrayAscend, [array], TypeError);
+    return true;
+  }
+
+  // abnoraml systems
+  test_sortArrayAscend_3_2(){
+    tester.assertError(sortArrayAscend, [], TypeError);
+    return true;
+  }
 }
 
 /**

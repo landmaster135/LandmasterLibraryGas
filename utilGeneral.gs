@@ -101,6 +101,42 @@ function getFunctionsByConstants(text){
   return tmp_text;
 };
 
+/**
+ * @param {any[]} array
+ * @return {any[]}
+*/
+function sortArrayDescend(array){
+  if(!isObjectType(array, "Array")){
+    throw new TypeError("array must be Array type.");
+  }
+  array.sort(function(a, b){
+    if(a > b){
+      return -1
+    }else{
+      return 1
+    }
+  });
+  return array;
+}
+
+/**
+ * @param {any[]} array
+ * @return {any[]}
+*/
+function sortArrayAscend(array){
+  if(!isObjectType(array, "Array")){
+    throw new TypeError("array must be Array type.");
+  }
+  array.sort(function(a, b){
+    if(a > b){
+      return 1
+    }else{
+      return -1
+    }
+  });
+  return array;
+}
+
 function printGetFunctionsByConstants(){
   const text = `const BEARER_TOKEN_TWITTER_ACCOUNT_JP = "AAAAAAAAAAAAAAAAAAAAAD6UYQEAAAAAZImoEnceh4ZHnxX%2B5F20B7kLGTA%3DxhSs33RzOAEslNlbFzarFTiti3bIeBN7T8xvXBEsY4jeP2J6lH";
 const ACCESS_TOKEN_TWITTER_ACCOUNT_JP = "1484872342367240200-yCMRHAjwULujWnZJj5qknKe3WRxfAb";
