@@ -278,6 +278,425 @@ function ERROR_LOG_DOC_ID(){
   }
 
   // noraml systems
+  test_isErrorType_1_1(){
+    try{
+      throw new TypeError("testtesttest");
+    }catch(error){
+      const actual = isErrorType(error);
+      const expected = true;
+      tester.assertEquals(actual, expected);
+      return true;
+    }
+  }
+
+  // noraml systems
+  test_isErrorType_1_2(){
+    try{
+      throw new RangeError("testtesttest");
+    }catch(error){
+      const actual = isErrorType(error);
+      const expected = true;
+      tester.assertEquals(actual, expected);
+      return true;
+    }
+  }
+
+  // noraml systems
+  test_isErrorType_1_3(){
+    try{
+      throw new EvalError("testtesttest");
+    }catch(error){
+      const actual = isErrorType(error);
+      const expected = true;
+      tester.assertEquals(actual, expected);
+      return true;
+    }
+  }
+
+  // noraml systems
+  test_isErrorType_1_4(){
+    try{
+      throw new ValueError("testtesttest");
+    }catch(error){
+      const actual = isErrorType(error);
+      const expected = true;
+      tester.assertEquals(actual, expected);
+      return true;
+    }
+  }
+
+  // noraml systems
+  test_isErrorType_1_5(){
+    try{
+      throw new SyntaxError("testtesttest");
+    }catch(error){
+      const actual = isErrorType(error);
+      const expected = true;
+      tester.assertEquals(actual, expected);
+      return true;
+    }
+  }
+
+  // noraml systems
+  test_isErrorType_1_6(){
+    try{
+      throw new AssertError("testtesttest");
+    }catch(error){
+      const actual = isErrorType(error);
+      const expected = true;
+      tester.assertEquals(actual, expected);
+      return true;
+    }
+  }
+
+  // noraml systems
+  test_isErrorType_1_7(){
+    try{
+      throw new ReferenceError("testtesttest");
+    }catch(error){
+      const actual = isErrorType(error);
+      const expected = true;
+      tester.assertEquals(actual, expected);
+      return true;
+    }
+  }
+
+  // semi-noraml systems
+  test_isErrorType_2_1(){
+    const error = "TypeError";
+    const actual = isErrorType(error);
+    const expected = false;
+    tester.assertEquals(actual, expected);
+    return true;
+  }
+
+  // semi-noraml systems
+  test_isErrorType_2_2(){
+    const error = 2;
+    const actual = isErrorType(error);
+    const expected = false;
+    tester.assertEquals(actual, expected);
+    return true;
+  }
+
+  // semi-noraml systems
+  test_isErrorType_2_3(){
+    const error = null;
+    const actual = isErrorType(error);
+    const expected = false;
+    tester.assertEquals(actual, expected);
+    return true;
+  }
+
+  // semi-noraml systems
+  test_isErrorType_2_4(){
+    const actual = isErrorType();
+    const expected = false;
+    tester.assertEquals(actual, expected);
+    return true;
+  }
+
+  // semi-noraml systems
+  test_isErrorType_2_5(){
+    const error = [];
+    const actual = isErrorType(error);
+    const expected = false;
+    tester.assertEquals(actual, expected);
+    return true;
+  }
+
+  // semi-noraml systems
+  test_isErrorType_2_6(){
+    const error = {};
+    const actual = isErrorType(error);
+    const expected = false;
+    tester.assertEquals(actual, expected);
+    return true;
+  }
+
+  // semi-noraml systems
+  test_isErrorType_2_7(){
+    const errorList = [];
+    const error = new Set(errorList);
+    const actual = isErrorType(error);
+    const expected = false;
+    tester.assertEquals(actual, expected);
+    return true;
+  }
+
+  // noraml systems
+  test_isObjectType_1_1(){
+    const var1 = 1;
+    const type1 = "Number";
+    const actual = isObjectType(var1, type1);
+    const expected = true;
+    tester.assertEquals(actual, expected);
+    return true;
+  }
+
+  // noraml systems
+  test_isObjectType_1_2(){
+    const var1 = 1.1;
+    const type1 = "Number";
+    const actual = isObjectType(var1, type1);
+    const expected = true;
+    tester.assertEquals(actual, expected);
+    return true;
+  }
+
+  // noraml systems
+  test_isObjectType_2_1(){
+    const var1 = "1";
+    const type1 = "String";
+    const actual = isObjectType(var1, type1);
+    const expected = true;
+    tester.assertEquals(actual, expected);
+    return true;
+  }
+
+  // noraml systems
+  test_isObjectType_2_2(){
+    const var1 = "1.1";
+    const type1 = "String";
+    const actual = isObjectType(var1, type1);
+    const expected = true;
+    tester.assertEquals(actual, expected);
+    return true;
+  }
+
+  // noraml systems
+  test_isObjectType_2_3(){
+    const var1 = "abc";
+    const type1 = "String";
+    const actual = isObjectType(var1, type1);
+    const expected = true;
+    tester.assertEquals(actual, expected);
+    return true;
+  }
+
+  // noraml systems
+  test_isObjectType_3_1(){
+    const var1 = ["1", 1];
+    const type1 = "Array";
+    const actual = isObjectType(var1, type1);
+    const expected = true;
+    tester.assertEquals(actual, expected);
+    return true;
+  }
+
+  // noraml systems
+  test_isObjectType_3_2(){
+    const var1 = [[], [], []];
+    const type1 = "Array";
+    const actual = isObjectType(var1, type1);
+    const expected = true;
+    tester.assertEquals(actual, expected);
+    return true;
+  }
+
+  // noraml systems
+  test_isObjectType_3_3(){
+    const var1 = [{}, {}];
+    const type1 = "Array";
+    const actual = isObjectType(var1, type1);
+    const expected = true;
+    tester.assertEquals(actual, expected);
+    return true;
+  }
+
+  // noraml systems
+  test_isObjectType_4_1(){
+    const var1 = {};
+    const type1 = "Object";
+    const actual = isObjectType(var1, type1);
+    const expected = true;
+    tester.assertEquals(actual, expected);
+    return true;
+  }
+
+  // noraml systems
+  test_isObjectType_4_2(){
+    const var1 = {test: "abc"};
+    const type1 = "Object";
+    const actual = isObjectType(var1, type1);
+    const expected = true;
+    tester.assertEquals(actual, expected);
+    return true;
+  }
+
+  // noraml systems
+  test_isObjectType_4_3(){
+    const var1 = {test: 234};
+    const type1 = "Object";
+    const actual = isObjectType(var1, type1);
+    const expected = true;
+    tester.assertEquals(actual, expected);
+    return true;
+  }
+
+  // noraml systems
+  test_isObjectType_5_1(){
+    const var1 = null;
+    const type1 = "Null";
+    const actual = isObjectType(var1, type1);
+    const expected = true;
+    tester.assertEquals(actual, expected);
+    return true;
+  }
+
+  // noraml systems
+  test_isObjectType_6_1(){
+    function objTestFunc(){
+      return "test";
+    }
+    const var1 = objTestFunc;
+    const type1 = "Function";
+    const actual = isObjectType(var1, type1);
+    const expected = true;
+    tester.assertEquals(actual, expected);
+    return true;
+  }
+
+  // noraml systems
+  test_isObjectType_6_2(){
+    class ObjTest{
+      objTestFunc(){
+        return "test";
+      }
+    }
+    const objTest = new ObjTest();
+    const var1 = objTest.objTestFunc;
+    const type1 = "Function";
+    const actual = isObjectType(var1, type1);
+    const expected = true;
+    tester.assertEquals(actual, expected);
+    return true;
+  }
+
+  // noraml systems
+  test_isObjectType_7_1(){
+    class ObjTest{
+      objTestFunc(){
+        return "test";
+      }
+    }
+    const var1 = ObjTest.objTestFunc;
+    const type1 = "Undefined";
+    const actual = isObjectType(var1, type1);
+    const expected = true;
+    tester.assertEquals(actual, expected);
+    return true;
+  }
+
+  // noraml systems
+  test_isObjectType_7_2(){
+    let var1;
+    const type1 = "Undefined";
+    const actual = isObjectType(var1, type1);
+    const expected = true;
+    tester.assertEquals(actual, expected);
+    return true;
+  }
+
+  // noraml systems
+  test_isObjectType_8_1(){
+    const var1 = new Set([1, 2]);
+    const type1 = "Set";
+    const actual = isObjectType(var1, type1);
+    const expected = true;
+    tester.assertEquals(actual, expected);
+    return true;
+  }
+
+  // noraml systems
+  test_isObjectType_9_1(){
+    const var1 = true;
+    const type1 = "Boolean";
+    const actual = isObjectType(var1, type1);
+    const expected = true;
+    tester.assertEquals(actual, expected);
+    return true;
+  }
+
+  // noraml systems
+  test_isObjectType_10_1(){
+    // const var1 = 2n ** 53n; // 2022/03/22: BigInt is inactive in GAS.
+    const var1 = 2 ** 52;
+    const type1 = "BigInt";
+    const actual = isObjectType(var1, type1);
+    const expected = false;
+    tester.assertEquals(actual, expected);
+    return true;
+  }
+
+  // noraml systems
+  test_isObjectType_11_1(){
+    // const var1 = 2n ** 53n; // 2022/03/22: BigInt is inactive in GAS.
+    const var1 = Symbol("Sym");
+    const type1 = "Symbol";
+    const actual = isObjectType(var1, type1);
+    const expected = true;
+    tester.assertEquals(actual, expected);
+    return true;
+  }
+
+  // noraml systems
+  test_isObjectType_12_1(){
+    const var1 = new TypeError();
+    const type1 = "Error";
+    const actual = isObjectType(var1, type1);
+    const expected = true;
+    tester.assertEquals(actual, expected);
+    return true;
+  }
+
+  // abnoraml systems
+  test_isObjectType_20_1(){
+    const var1 = null;
+    const type1 = null;
+    tester.assertError(isObjectType, [var1, type1], TypeError);
+    return true;
+  }
+
+  // abnoraml systems
+  test_isObjectType_20_2(){
+    const var1 = null;
+    const type1 = "Null"
+    tester.assertError(isObjectType, [var1], TypeError);
+    return true;
+  }
+
+  // abnoraml systems
+  test_isObjectType_20_3(){
+    tester.assertError(isObjectType, [], TypeError);
+    return true;
+  }
+
+  // abnoraml systems
+  test_isObjectType_20_4(){
+    const var1 = null;
+    const type1 = 1;
+    tester.assertError(isObjectType, [var1, type1], TypeError);
+    return true;
+  }
+
+  // abnoraml systems
+  test_isObjectType_20_5(){
+    const var1 = null;
+    const type1 = [];
+    tester.assertError(isObjectType, [var1, type1], TypeError);
+    return true;
+  }
+
+  // abnoraml systems
+  test_isObjectType_20_6(){
+    const var1 = null;
+    const type1 = {};
+    tester.assertError(isObjectType, [var1, type1], TypeError);
+    return true;
+  }
+  
+  // noraml systems
   test_sortArrayDescend_1_1(){
     const var1 = 1;
     const var2 = 2;
