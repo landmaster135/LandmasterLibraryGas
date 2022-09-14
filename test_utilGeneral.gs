@@ -650,6 +650,16 @@ function ERROR_LOG_DOC_ID(){
     return true;
   }
 
+  // noraml systems
+  test_isObjectType_13_1(){
+    const var1 = new Date(2019, 0, 1, 9, 9, 9);
+    const type1 = "[object Date]";
+    const actual = isObjectType(var1, type1);
+    const expected = true;
+    tester.assertEquals(actual, expected);
+    return true;
+  }
+
   // abnoraml systems
   test_isObjectType_20_1(){
     const var1 = null;
