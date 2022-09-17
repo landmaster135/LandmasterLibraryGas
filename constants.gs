@@ -1,3 +1,5 @@
-const FOLDER_ID_TEST_FOR_UTIL_GENERAL = LandGasterId.LLG_FOLDER_ID_TEST_FOR_UTIL_GENERAL();
+let idClass = LandGasterId.createClassForLandmasterLibraryGas();
 
-const SHEET_ID_TEST = LandGasterId.LLG_SHEET_ID_TEST();
+const FOLDER_ID_TEST_FOR_UTIL_GENERAL = idClass.LLG_FOLDER_ID_TEST_FOR_UTIL_GENERAL();
+
+const SHEET_ID_TEST = idClass.LLG_SHEET_ID_TEST();
