@@ -1,6 +1,16 @@
 // util general
 
 /**
+ * @param {string} url
+ * @param {string} description
+ * @return {string} 
+*/
+function getHref(url, description){
+  const a_tag = `<a href="${url}" target="_blank" rel="noopener noreferrer">${description}</a>`;
+  return a_tag;
+}
+
+/**
  * @param {string} repeatStr
  * @param {number} [repeatNumberToMark=15]
  * @return {string} returnStr
