@@ -92,7 +92,7 @@ function getValueArrayFromRowArray(sheetName, rowArray, targetColumn){
 /**
    * onOpen
 */
-function onOpenToAddMenu(menuName, objActions){
+function onOpenToAddSpreadsheetMenu(menuName, objActions){
   SpreadsheetApp
     .getActiveSpreadsheet()
     .addMenu(menuName, objActions);
