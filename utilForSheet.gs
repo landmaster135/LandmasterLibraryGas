@@ -40,6 +40,17 @@ function getIdToReadActualInGss(sheetName, columnForId, {idToRead=801, sheetId="
   return idToReadActual;
 }
 
+/**
+ * @param {string} sheetName
+ * * @return {any[][]} 
+*/
+function getValuesBySelectedArea(sheetName){
+  const ss = SpreadsheetApp.getActive().getSheetByName(sheetName);
+  const activeValues = ss.getActiveRange().getValues();
+  console.log();
+  return activeValues;
+}
+
 function getRowsEmptyCell(sheetName, targetColumn, row_to_read){
   const funcName = 'getRowsEmptyCell';
   // get sheet.
