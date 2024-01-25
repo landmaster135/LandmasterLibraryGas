@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <title><?= SITE_TITLE ?></title>
+    <?!= HtmlService.createHtmlOutputFromFile("index_css").getContent() ?>
+  </head>
+  <body>
+    <? if(EXE_TYPE === "set_icons") { ?>
+      <h1><?= SITE_TITLE_ICON ?></h1>
+      <pre><?= setImageFromGoogleDrive(); ?></pre>
+    <? }else if(EXE_TYPE === "get_jsdoc"){ ?>
+      <h1><?= SITE_TITLE_JSDOC ?></h1>
+      <pre><?= getJsdoc(); ?></pre>
+    <? }else if(EXE_TYPE === "output_rgbColor"){ ?>
+      <h1><?= SITE_TITLE_COLOR ?></h1>
+      <pre><?= outputRgbColor(); ?></pre>
+    <? }else if(EXE_TYPE === "output_exportXlsx"){ ?>
+      <h1><?= SITE_TITLE_BACKUP ?></h1>
+      <p><?= BACKUP_CAUTION_PREV_RESULT ?></p>
+      <? 
+        let files = backupFiles();
+        for(let i = 0; i < files.length; i++) { ?>
+          <pre><?= files[i]; ?></pre>
+      <? } ?>
+    <? }else if(EXE_TYPE === "output_ocrResult"){ ?>
+      <h1><?= SITE_TITLE_OCR ?></h1>
+      <p><?= outputCautionPrevResult(); ?></p>
+      <? 
+        let texts = outputOcrResult();
+        for(let i = 0; i < texts.length; i++) { ?>
+          <h2><?= i; ?></h2>
+          <pre><?= texts[i]; ?></pre>
+      <? } ?>
+    <? }else if(EXE_TYPE === "output_googleSearch"){ ?>
+      <h1><?= SITE_TITLE_SEARCH ?></h1>
+      <table>
+        <thead>
+          <tr><th>Searching URL List</th></tr>
+        </thead>
+        <tbody>
+          <? 
+            let pages = makeMeaningUrls();
+            for(let i = 0; i < pages.length; i++) { ?>
+            <tr><td><?!= getHref(pages[i][0], pages[i][1]); ?></td></tr>
+          <? } ?>
+        </tbody>
+      </table>
+    <? } ?>
+
+    <?!= HtmlService.createHtmlOutputFromFile("index_js").getContent() ?>
+  </body>
+</html>
